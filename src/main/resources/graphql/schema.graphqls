@@ -1,0 +1,28 @@
+type Query {
+    bookById(id: ID): Book
+    companyByName(name: String): Company
+}
+
+type Book {
+    id: ID
+    name: String
+    pageCount: Int
+    author: Author
+}
+
+type Author {
+    id: ID
+    firstName: String
+    lastName: String
+}
+
+type Company {
+    SIC: String
+    category: String
+    companyNumber: String
+    countryOfOrigin: String
+    incorporationDate: String
+    mortgagesOutstanding: Int
+    name: String
+    status: String
+}
