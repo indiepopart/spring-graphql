@@ -2,6 +2,8 @@ type Query {
     bookById(id: ID): Book
     companyByName(name: String): Company
     personByName(name: String): Person
+    personById(id: ID): Person
+    companyById(id: ID): Company
 }
 
 type Book {
@@ -18,6 +20,7 @@ type Author {
 }
 
 type Company {
+    id: ID
     SIC: String
     category: String
     companyNumber: String
@@ -26,12 +29,15 @@ type Company {
     mortgagesOutstanding: Int
     name: String
     status: String
+    controlledBy: [Person!]
 }
 
 type Person {
+    id: ID
     birthMonth: String
     birthYear: String
     nationality: String
     name: String
     countryOfResidence: String
+    controls: [Company!]
 }

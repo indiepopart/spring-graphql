@@ -5,7 +5,7 @@ import org.springframework.data.neo4j.repository.ReactiveNeo4jRepository;
 import reactor.core.publisher.Mono;
 
 
-public interface PersonRepository extends ReactiveNeo4jRepository<Person, String> {
+public interface PersonRepository extends ReactiveNeo4jRepository<Person, Long> {
 
     Mono<Person> findByName(String name);
 }
