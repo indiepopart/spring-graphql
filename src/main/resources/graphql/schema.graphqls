@@ -5,6 +5,7 @@ type Query {
     personById(id: ID): Person
     companyById(id: ID): Company
     company(page: Int): [Company!]!
+    companyCount: Int
 }
 
 type Book {
