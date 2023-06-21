@@ -45,4 +45,9 @@ public class CompanyController {
     public Flux<Company> controls(Person person){
         return companyRepository.findByControlledBy(person.getName());
     }
+
+    @QueryMapping
+    public Flux<Company> company(@Argument Long page){
+        return companyRepository.findAll().skip(page*10).take(10);
+    }
 }

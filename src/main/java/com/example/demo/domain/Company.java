@@ -19,7 +19,7 @@ public class Company {
     private String companyNumber;
     private String countryOfOrigin;
     private LocalDate incorporationDate;
-    private int mortgagesOutstanding;
+    private Integer mortgagesOutstanding;
     private String name;
     private String status;
 
@@ -27,7 +27,7 @@ public class Company {
     private List<Person> controlledBy = new ArrayList<>();
 
 
-    public Company(String SIC, String category, String companyNumber, String countryOfOrigin, LocalDate incorporationDate, int mortgagesOutstanding, String name, String status) {
+    public Company(String SIC, String category, String companyNumber, String countryOfOrigin, LocalDate incorporationDate, Integer mortgagesOutstanding, String name, String status) {
         this.id = null;
         this.SIC = SIC;
         this.category = category;
@@ -105,11 +105,11 @@ public class Company {
         this.incorporationDate = incorporationDate;
     }
 
-    public int getMortgagesOutstanding() {
+    public Integer getMortgagesOutstanding() {
         return mortgagesOutstanding;
     }
 
-    public void setMortgagesOutstanding(int mortgagesOutstanding) {
+    public void setMortgagesOutstanding(Integer mortgagesOutstanding) {
         this.mortgagesOutstanding = mortgagesOutstanding;
     }
 }

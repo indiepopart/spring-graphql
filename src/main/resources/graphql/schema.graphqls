@@ -4,6 +4,7 @@ type Query {
     personByName(name: String): Person
     personById(id: ID): Person
     companyById(id: ID): Company
+    company(page: Int): [Company!]!
 }
 
 type Book {
