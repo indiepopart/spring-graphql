@@ -23,6 +23,8 @@ public class Company {
     private String name;
     private String status;
 
+    // Mapped automatically
+    private List<Property> owns = new ArrayList<>();
     @Relationship(type = "HAS_CONTROL", direction = Relationship.Direction.INCOMING)
     private List<Person> controlledBy = new ArrayList<>();
 
@@ -81,6 +83,22 @@ public class Company {
         this.countryOfOrigin = countryOfOrigin;
     }
 
+    public LocalDate getIncorporationDate() {
+        return incorporationDate;
+    }
+
+    public void setIncorporationDate(LocalDate incorporationDate) {
+        this.incorporationDate = incorporationDate;
+    }
+
+    public Integer getMortgagesOutstanding() {
+        return mortgagesOutstanding;
+    }
+
+    public void setMortgagesOutstanding(Integer mortgagesOutstanding) {
+        this.mortgagesOutstanding = mortgagesOutstanding;
+    }
+
     public String getName() {
         return name;
     }
@@ -97,19 +115,7 @@ public class Company {
         this.status = status;
     }
 
-    public LocalDate getIncorporationDate() {
-        return incorporationDate;
-    }
-
-    public void setIncorporationDate(LocalDate incorporationDate) {
-        this.incorporationDate = incorporationDate;
-    }
-
-    public Integer getMortgagesOutstanding() {
-        return mortgagesOutstanding;
-    }
-
-    public void setMortgagesOutstanding(Integer mortgagesOutstanding) {
-        this.mortgagesOutstanding = mortgagesOutstanding;
+    public Long getId() {
+        return id;
     }
 }

@@ -21,6 +21,7 @@ public class CompanyController {
     @Autowired
     private PersonRepository personRepository;
 
+
     @QueryMapping
     public Mono<Company> companyByName(@Argument String name) {
         return companyRepository.findByName(name);
@@ -48,8 +49,8 @@ public class CompanyController {
     }
 
     @QueryMapping
-    public Flux<Company> company(@Argument Long page) {
-        return companyRepository.findAll().skip(page * 10).take(10);
+    public Flux<Company> companyList(@Argument Long page) {
+        return companyRepository.findAll().skip((page - 1) * 10).take(10);
     }
 
     @QueryMapping

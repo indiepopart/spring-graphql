@@ -1,25 +1,12 @@
 type Query {
-    bookById(id: ID): Book
     companyByName(name: String): Company
     personByName(name: String): Person
     personById(id: ID): Person
     companyById(id: ID): Company
-    company(page: Int): [Company!]!
+    companyList(page: Int): [Company!]!
     companyCount: Int
 }
 
-type Book {
-    id: ID
-    name: String
-    pageCount: Int
-    author: Author
-}
-
-type Author {
-    id: ID
-    firstName: String
-    lastName: String
-}
 
 type Company {
     id: ID
@@ -31,7 +18,8 @@ type Company {
     mortgagesOutstanding: Int
     name: String
     status: String
-    controlledBy: [Person!]
+    controlledBy: [Person!]!
+    owns: [Property!]!
 }
 
 type Person {
@@ -42,4 +30,12 @@ type Person {
     name: String
     countryOfResidence: String
     controls: [Company!]
+}
+
+type Property {
+    id: ID
+    address: String
+    county: String
+    district: String
+    titleNumber: String
 }

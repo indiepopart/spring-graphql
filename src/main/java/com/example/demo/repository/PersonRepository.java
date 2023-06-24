@@ -8,4 +8,5 @@ import reactor.core.publisher.Mono;
 public interface PersonRepository extends ReactiveNeo4jRepository<Person, Long> {
 
     Mono<Person> findByName(String name);
+
 }

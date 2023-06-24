@@ -12,4 +12,6 @@ public interface CompanyRepository extends ReactiveNeo4jRepository<Company, Long
 
     @Query("MATCH (c:Company) WHERE (:Person {name: $name})-[:HAS_CONTROL]->(c) RETURN c")
     Flux<Company> findByControlledBy(String name);
+
+
 }

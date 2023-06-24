@@ -1,0 +1,13 @@
+query companyDetails($id: ID) {
+    companyById(id: $id) {
+        id
+        SIC
+        name
+        status
+        category
+        companyNumber
+        countryOfOrigin
+        incorporationDate
+        mortgagesOutstanding
+    }
+ }
