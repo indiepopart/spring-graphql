@@ -1,4 +1,4 @@
-query companyDetails($id: ID) {
+query companyById($id: ID) {
     companyById(id: $id) {
         id
         SIC
