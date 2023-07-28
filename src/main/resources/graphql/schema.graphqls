@@ -1,7 +1,4 @@
 type Query {
-    companyByName(name: String): Company
-    personByName(name: String): Person
-    personById(id: ID): Person
     companyById(id: ID): Company
     companyList(page: Int): [Company!]!
     companyCount: Int

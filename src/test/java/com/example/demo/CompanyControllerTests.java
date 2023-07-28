@@ -3,9 +3,7 @@ package com.example.demo;
 import com.example.demo.controller.CompanyController;
 import com.example.demo.domain.Company;
 import com.example.demo.repository.CompanyRepository;
-import com.example.demo.repository.PersonRepository;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.graphql.GraphQlTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -24,9 +22,6 @@ public class CompanyControllerTests {
 
     @MockBean
     private CompanyRepository companyRepository;
-
-    @MockBean
-    private PersonRepository personRepository;
 
     @Test
     void shouldGetCompany() {
